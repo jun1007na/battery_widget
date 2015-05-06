@@ -50,7 +50,7 @@ public class BatteryWidget extends AppWidgetProvider{
             AppWidgetManager awm = AppWidgetManager.getInstance(c);
             ComponentName cn = new ComponentName(c, BatteryWidget.class);
             RemoteViews rv = new RemoteViews(c.getPackageName(), R.layout.main);
-            rv.setTextViewText(R.id.textView, "Battery:"+(int)(level*100/scale)+"%");
+            rv.setTextViewText(R.id.textView, (int)(level*100/scale)+"%");
             awm.updateAppWidget(cn, rv);
         }
     };
